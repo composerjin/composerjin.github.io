@@ -1,0 +1,87 @@
+/* src/components/Socials.css */
+
+.socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.8rem;
+  position: relative;
+  z-index: 10;
+}
+
+.social-group.left {
+  padding-left: 1.5rem;
+}
+
+.social-group.right {
+  padding-right: 1.5rem;
+}
+
+.social-group {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.socials a {
+  color: var(--icon);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.socials a:hover {
+  transform: scale(1.15);
+  color: var(--icon-highlight);
+}
+
+.mobile-socials-wrapper {
+  display: none;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.social-icon.disabled {
+  color: gray;
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+  transition: none;
+}
+
+.social-icon.disabled:hover {
+  transform: none;
+  color: gray;
+}
+
+@media (max-width: 700px) {
+  .header-socials {
+    display: none;
+  }
+
+  .mobile-socials-wrapper {
+    display: flex;
+  }
+
+  .socials {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 0 1rem;
+    font-size: 2rem;
+  }
+
+  .socials a {
+    color: var(--primary-text);
+  }
+
+  .socials a:hover {
+    color: var(--bg-highlight);
+  }
+
+  .social-group.left,
+  .social-group.right {
+    padding: 0;
+    gap: 1rem;
+  }
+}

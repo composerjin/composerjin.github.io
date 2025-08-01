@@ -1,0 +1,67 @@
+/* src/components/Header.css */
+
+.header {
+  max-width: 900px;
+  background-color: var(--bg-highlight);
+  padding: 3rem 1rem 1rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: calc(var(--profile-img-size) / 2 + 20px);
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* 40% black transparent overlay */
+  z-index: 1;
+  pointer-events: none; /* allow clicks through overlay */
+}
+
+.header > * {
+  position: relative;
+  z-index: 2;
+}
+
+.header-socials {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.header h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: var(--logo-text);
+}
+
+.header h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  color: var(--logo-text);
+}
+
+.profile-pic {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(var(--profile-img-size) / -2);
+}
+
+.profile-pic img {
+  width: var(--profile-img-size);
+  height: var(--profile-img-size);
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid var(--bg);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .4);
+}
+

@@ -1,0 +1,58 @@
+:root {
+  /* Page */
+  --bg: white;
+  --bg-highlight: #869dbd; /* #cbd5e1 #afbcbc*/
+  --bg-secondary-highlight: #d2dce2;
+  --logo-text: #ffffff;
+  --primary-text: #06354c;
+  --transparency: rgba(0, 0, 0, 0.6);
+  --transparency-alt: rgba(0, 0, 0, 0.4);
+
+  /* Icons */
+  --icon: #ffffff;
+  --icon-highlight: #d2dce2;
+
+  /* Sizing parameters */
+  --profile-img-size: 320px;
+
+  /* Misc */
+
+}
+
+[data-theme='dark'] {
+  --bg: #121212;
+  --text: #e0e0e0;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+.App {
+  max-width: 900px;
+  margin: auto;
+  padding: 1rem;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.centerline {
+  position: fixed;      
+  top: 0;
+  left: 50vw;        
+  width: 2px;
+  height: 100vh;
+  background-color: red;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 9999;
+}
+
