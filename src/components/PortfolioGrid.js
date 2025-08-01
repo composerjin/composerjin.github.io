@@ -31,6 +31,7 @@ const PortfolioGrid = ({ title, items, onCardClick }) => {
             <img src={item.img} alt={item.title} />
             <p>{item.title}</p>
             <div className="tags">
+              {item.isUpcoming && <span className="tag upcoming">Upcoming</span>}
               {item.availableForLicensing && <span className="tag licensing">Available for Licensing</span>}
               {item.inDev && <span className="tag in-development">In Development</span>}
             </div>

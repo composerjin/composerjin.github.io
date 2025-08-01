@@ -55,14 +55,14 @@
 
 /* Tags */
 .tags {
-  margin-top: auto;
   display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  flex-wrap: wrap;         /* Allow wrapping when necessary */
+  justify-content: center; /* Center all tags horizontally */
+  gap: 0.5rem;              /* Space between tags */
+  margin-top: auto;
+  padding: 0 1rem;
 }
+
 
 .tag {
   background-color: var(--primary-text);
@@ -76,12 +76,17 @@
 }
 
 .tag.licensing {
-  background-color: #2cb643;  /* teal */
+  background-color: #2cb643;
   color: white;
 }
 
 .tag.in-development {
-  background-color: #e76f51;  /* warm red */
+  background-color: #e76f51;
+  color: white;
+}
+
+.tag.upcoming{
+  background-color: #1a6b91;
   color: white;
 }
 
@@ -226,6 +231,10 @@
   margin: 0.5rem 0;
 }
 
+.modal-link-go {
+  color: var(--primary-text);
+  font-size: 0.9rem;
+}
 
 
 @keyframes fadeIn {

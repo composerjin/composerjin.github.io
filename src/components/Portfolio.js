@@ -3,9 +3,23 @@ import React, { useState } from 'react';
 import './Portfolio.css';
 import PortfolioGrid from './PortfolioGrid';
 
+import {
+  FaExternalLinkAlt 
+} from 'react-icons/fa';
+
 const portfolioItems = [
   {
     id: 1,
+    img: '/projects/upcoming.jpg',
+    title: 'Grit – Cinematic String Quartet (Releasing Soon)',
+    description: 'A cinematic string quartet for film and visual storytelling, enhancing emotional depth. Releasing soon on Youtube, Spotify and Soundcloud.',
+    audioURL: '/audio/grit.mp3',
+    isUpcoming: true,
+    inDev: true,
+
+  },
+  {
+    id: 2,
     img: '/projects/gugak.jpg',
     title: 'Performance on Gugak Broadcasting System (Gugak TV)',
     description: 'Performance on the traditional Korean string instrument geomungo was broadcast on Gugak Broadcasting System: TV (국악방송TV) on 18 July 2021, showcasing my interpretation of Korean traditional music on national television.',
@@ -15,13 +29,14 @@ const portfolioItems = [
     hasVideo: true,
   },
   {
-    id: 2,
+    id: 3,
     img: '/projects/vrmusic.jpg',
     title: 'Background & Trailer Music for VR Game Huetopia (Meta Quest 3)',
     description: 'Composed immersive ambient soundscapes, background music and dynamic trailer music tailored for VR gaming.',
     link: 'https://www.meta.com/en-gb/experiences/huetopia/26230755453235481/',
     linktext: 'View on Meta',
-    audioURL: '/audio/Huetopia Trailer.mp3'
+    audioURL: '/audio/Huetopia Trailer.mp3',
+    isUpcoming: true,
   },
 ];
 
@@ -123,7 +138,7 @@ const Portfolio = () => {
           {selectedItem.link && (
             <div className="modal-link">
               <a href={selectedItem.link} target="_blank" rel="noopener noreferrer">
-                {selectedItem.linktext} ↗
+                {selectedItem.linktext} <FaExternalLinkAlt className="modal-link-go"/>
               </a>
             </div>
           )}
@@ -133,6 +148,9 @@ const Portfolio = () => {
           )}
 
           <div className="tags">
+            {selectedItem.isUpcoming && (
+              <span className="tag upcoming">Upcoming</span>
+            )}
             {selectedItem.availableForLicensing && (
               <span className="tag licensing">Available for Licensing</span>
             )}
