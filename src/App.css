@@ -1,6 +1,8 @@
 :root {
   /* Page */
-  --bg: white;
+  /* --bg: #F7FCFE; */
+  --bg: #F9EFED;
+  /* --bg: #F7FCFE */
   --bg-highlight: #869dbd; /* #cbd5e1 #afbcbc*/
   --bg-secondary-highlight: #d2dce2;
   --logo-text: #ffffff;
@@ -16,7 +18,6 @@
   --profile-img-size: 320px;
 
   /* Misc */
-
 }
 
 [data-theme='dark'] {

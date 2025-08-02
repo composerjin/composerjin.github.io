@@ -51,18 +51,23 @@
   margin: 0;
   color: var(--primary-text);
   flex-shrink: 0;
+
+  text-align: center;
+}
+
+.portfolio-section {
+  margin-bottom: 2rem; 
 }
 
 /* Tags */
 .tags {
   display: flex;
-  flex-wrap: wrap;         /* Allow wrapping when necessary */
-  justify-content: center; /* Center all tags horizontally */
-  gap: 0.5rem;              /* Space between tags */
+  flex-wrap: wrap;      
+  justify-content: center; 
+  gap: 0.5rem; 
   margin-top: auto;
   padding: 0 1rem;
 }
-
 
 .tag {
   background-color: var(--primary-text);
@@ -75,7 +80,7 @@
   user-select: none;
 }
 
-.tag.licensing {
+.tag.available-for-licensing {
   background-color: #2cb643;
   color: white;
 }
@@ -158,6 +163,8 @@
 .modal-content h3 {
   font-size: 1.2rem;
   margin: 0.5rem 0;
+
+  /* text-align: centre; */
 }
 
 .modal-content p {
@@ -217,6 +224,18 @@
   width: 100%;
   max-width: 500px;
 }
+
+.modal-audio-title {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.modal-audio-item {
+  margin-bottom: 1.5rem;
+}
+
 
 .modal-link {
   text-align: center;

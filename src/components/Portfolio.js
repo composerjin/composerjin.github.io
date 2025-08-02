@@ -9,17 +9,15 @@ import {
 
 const portfolioItems = [
   {
-    id: 1,
     img: '/projects/upcoming.jpg',
     title: 'Grit – Cinematic String Quartet (Releasing Soon)',
     description: 'A cinematic string quartet for film and visual storytelling, enhancing emotional depth. Releasing soon on Youtube, Spotify and Soundcloud.',
-    audioURL: '/audio/grit.mp3',
-    isUpcoming: true,
-    inDev: true,
-
+    audioFiles: [
+      { title: "Grit Excerpt", url: '/audio/grit.mp3' },
+    ],
+    tags: ['Upcoming', 'In Development'],
   },
   {
-    id: 2,
     img: '/projects/gugak.jpg',
     title: 'Performance on Gugak Broadcasting System (Gugak TV)',
     description: 'Performance on the traditional Korean string instrument geomungo was broadcast on Gugak Broadcasting System: TV (국악방송TV) on 18 July 2021, showcasing my interpretation of Korean traditional music on national television.',
@@ -29,49 +27,56 @@ const portfolioItems = [
     hasVideo: true,
   },
   {
-    id: 3,
     img: '/projects/vrmusic.jpg',
     title: 'Background & Trailer Music for VR Game Huetopia (Meta Quest 3)',
     description: 'Composed immersive ambient soundscapes, background music and dynamic trailer music tailored for VR gaming.',
     link: 'https://www.meta.com/en-gb/experiences/huetopia/26230755453235481/',
     linktext: 'View on Meta',
-    audioURL: '/audio/Huetopia Trailer.mp3',
-    isUpcoming: true,
+    audioFiles: [
+      { title: "Huetopia Trailer", url: '/audio/Huetopia Trailer.mp3' },
+      { title: "Huetopia Background Music", url: '/audio/Huetopia Background Music.mp3' },
+    ],
+    tags: ['Upcoming'],
   },
 ];
 
 const freelanceItems = [
   {
-    id: 1,
     img: '/projects/med.jpg',
     title: 'Medieval Fantasy BGM for Visual Media',
     description: 'BMG/OST evoking a medieval atmosphere, ideal for fantasy films, games, or trailers with a historical or dramatic tone.',
-    availableForLicensing: true,
-    audioURL: '/audio/Medieval Violin Idea Demo copy.mp3'
+    audioFiles: [
+      { title: "Demo 1", url: '/audio/Medieval Violin Idea Demo 1.mp3' },
+      { title: "Demo 2", url: '/audio/Medieval Violin Idea Demo copy (2).mp3' }
+    ],
+    tags: ['Available for Licensing'],
   },
   {
-    id: 2,
     img: '/projects/tension.jpg',
     title: 'Tension-Building BGM for Visual Media',
     description: 'Tension-building BGM crafted to amplify tension in high-pressure scenes',
-    availableForLicensing: true,
-    audioURL: '/audio/Tension Build copy.mp3'
+    audioFiles: [
+      { title: "Tension Build", url: '/audio/Tension Build copy.mp3' },
+    ],
+    tags: ['Available for Licensing'],
   },
   {
-    id: 3,
     img: '/projects/nostalgia.jpg',
     title: 'Nostalgia-evoking BGM',
     description: 'Nostalgia-evoking BGM crafted to deepen emotional immersion',
-    availableForLicensing: true,
-    audioURL: '/audio/Nostalgic Waves.mp3'
+    audioFiles: [
+      { title: "Nostalgic Waves", url: '/audio/Nostalgic Waves.mp3' },
+    ],
+    tags: ['Available for Licensing'],
   },
   {
-    id: 4,
     img: '/projects/soothing.jpg',
     title: 'Soothing BGM Loop for Cozy Gameplay',
     description: 'Loopable BGM crafted to evoke cosiness. Ideal for healing-themed games',
-    inDev: true,
-    audioURL: '/audio/Cheeky Skips.mp3'
+    audioFiles: [
+      { title: "Cheeky Skips", url: '/audio/Cheeky Skips.mp3' },
+    ],
+    tags: ['In Development'],
   },
 ]
 
@@ -93,7 +98,7 @@ const Portfolio = () => {
       onCardClick={openModal}
     />
     <PortfolioGrid
-      title="Freelance"
+      title="Available for Licensing"
       items={freelanceItems}
       onCardClick={openModal}
     />
@@ -126,12 +131,17 @@ const Portfolio = () => {
 
           <p>{selectedItem.description}</p>
 
-          {selectedItem.audioURL && (
+          {selectedItem.audioFiles && selectedItem.audioFiles.length > 0 && (
             <div className="modal-audio-wrapper">
-              <audio controls>
-                <source src={selectedItem.audioURL} type="audio/mpeg" />
-                Your browser does not support the audio element.
-              </audio>
+              {selectedItem.audioFiles.map((audio, index) => (
+                <div key={index} className="modal-audio-item">
+                  <h4 className="modal-audio-title">{audio.title}</h4>
+                  <audio controls>
+                    <source src={audio.url} type="audio/mpeg" />
+                    Your browser does not support the audio element.
+                  </audio>
+                </div>
+              ))}
             </div>
           )}
           
@@ -148,16 +158,13 @@ const Portfolio = () => {
           )}
 
           <div className="tags">
-            {selectedItem.isUpcoming && (
-              <span className="tag upcoming">Upcoming</span>
-            )}
-            {selectedItem.availableForLicensing && (
-              <span className="tag licensing">Available for Licensing</span>
-            )}
-            {selectedItem.inDev && (
-              <span className="tag in-development">In Development</span>
-            )}
+            {selectedItem.tags && selectedItem.tags.map((tag, index) => (
+              <span key={index} className={`tag ${tag.toLowerCase().replace(/\s+/g, '-')}`}>
+                {tag}
+              </span>
+            ))}
           </div>
+
         </div>
       </div>
       )}
