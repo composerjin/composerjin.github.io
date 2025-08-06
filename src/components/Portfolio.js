@@ -25,7 +25,9 @@ const portfolioItems = [
     embed: 'https://www.youtube.com/embed/lHceGfwlfY8',
     linktext: 'Watch on YouTube',
     hasVideo: true,
+    tags: ['Performance'],
   },
+  
   {
     img: '/projects/vrmusic.jpg',
     title: 'Background & Trailer Music for VR Game Huetopia (Meta Quest 3)',
@@ -34,10 +36,21 @@ const portfolioItems = [
     linktext: 'View on Meta',
     audioFiles: [
       { title: "Huetopia Trailer", url: '/audio/Huetopia Trailer.mp3' },
-      { title: "Huetopia Background Music", url: '/audio/Huetopia Background Music.mp3' },
+      { title: "Huetopia Background Music", url: '/audio/Huetopia revision 2.mp3' },
     ],
     tags: ['Upcoming'],
   },
+
+  {
+    title: 'Sangria Stains – Solo Piano Performance at London College of Music',
+    description: 'Solo piano piece composed by Jin Cho and performed by Emanuele Mollica at the London College of Music concert hall. Written for a recital themed Musical Exoticism, the piece captures the vibrant spirit of Spanish music and culture.',
+    img: '/projects/sangria-thumbnail.jpg',
+    link: 'https://youtu.be/eE1SCukFFcc',
+    embed: 'https://www.youtube.com/embed/eE1SCukFFcc',
+    linktext: 'Watch on YouTube',
+    hasVideo: true,
+    tags: ['Performance'],
+  }
 ];
 
 const freelanceItems = [
@@ -111,6 +124,7 @@ const Portfolio = () => {
           {selectedItem.hasVideo ? (
             <div className="modal-image-wrapper">
               <iframe
+                title={selectedItem.title}
                 className="modal-video"
                 src={selectedItem.embed}
                 frameBorder="0"

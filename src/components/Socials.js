@@ -17,7 +17,8 @@ import {
 const socialLinks = [
   {
     icon: <FaYoutube />,
-    enabled: false,
+    href: 'https://www.youtube.com/@composer-jin',
+    enabled: true,
   },
   {
     icon: <FaSpotify />,

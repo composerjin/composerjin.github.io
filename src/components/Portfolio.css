@@ -95,6 +95,12 @@
   color: white;
 }
 
+.tag.performance{
+  background-color: #6149bb;
+  color: white;
+}
+
+
 /* Pages */
 .pagination {
   display: flex;
