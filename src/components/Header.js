@@ -11,7 +11,7 @@ const Header = () => {
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <h1>Composer Jin</h1>
-      <h2>Film, Game & Visual Media</h2>
+      <h2>Music Composer for Film, Game & Visual Media</h2>
       <div className="profile-pic">
         <img src="portrait.jpg" alt="Composer Jin" />
       </div>
