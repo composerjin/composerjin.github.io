@@ -7,6 +7,7 @@ import {
   FaExternalLinkAlt 
 } from 'react-icons/fa';
 
+// portfolio items
 const portfolioItems = [
   {
     img: '/projects/upcoming.jpg',
@@ -53,6 +54,7 @@ const portfolioItems = [
   }
 ];
 
+// freelance items
 const freelanceItems = [
   {
     img: '/projects/med.jpg',
