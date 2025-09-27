@@ -4,18 +4,31 @@ import './Portfolio.css';
 import PortfolioGrid from './PortfolioGrid';
 
 import {
-  FaExternalLinkAlt 
+  FaExternalLinkAlt,
+  FaSpotify, FaYoutube, FaApple, FaAmazon 
 } from 'react-icons/fa';
+
+import { SiTidal } from 'react-icons/si';
+
 
 const portfolioItems = [
   {
-    img: '/projects/upcoming.jpg',
-    title: 'Grit – Cinematic String Quartet (Releasing Soon)',
-    description: 'A cinematic string quartet for film and visual storytelling, enhancing emotional depth. Releasing soon on Youtube, Spotify and Soundcloud.',
-    audioFiles: [
-      { title: "Grit Excerpt", url: '/audio/grit.mp3' },
-    ],
-    tags: ['Upcoming', 'In Development'],
+    img: '/projects/yearning.jpg',
+    title: 'Yearning You Yet',
+    description: 'A cinematic string quartet for film and visual storytelling, enhancing emotional depth. Available for streaming on all major platforms.',
+    // audioFiles: [
+    //   { title: "Grit Excerpt", url: '/audio/grit.mp3' },
+    // ],
+    tags: ['Available for Streaming'],
+    imgborder: true,
+    spotifyPlayer : 'https://open.spotify.com/embed/track/{id}', 
+    listenOn: [
+      {spotify:'tmp'},
+      {youtube:'tmp'},
+      {apple:'tmp'},
+      {tidal:'tmp'},
+      {amazon:'tmp'}
+    ]
   },
   {
     img: '/projects/gugak.jpg',
@@ -110,6 +123,7 @@ const Portfolio = () => {
       items={portfolioItems}
       onCardClick={openModal}
     />
+
     <PortfolioGrid
       title="Available for Licensing"
       items={freelanceItems}
@@ -134,11 +148,12 @@ const Portfolio = () => {
               ></iframe>
             </div>
           ) : (
-            <img
-              className="modal-image"
-              src={selectedItem.img}
-              alt={selectedItem.title}
-            />
+              <img
+                className={selectedItem.imgborder ? 'modal-img-div-border' : 'modal-image'}
+                src={selectedItem.img}
+                alt={selectedItem.title}
+                style={selectedItem.imgborder && {objectFit: 'contain'}}
+              />
           )}
 
           <h3>{selectedItem.title}</h3>
@@ -150,7 +165,7 @@ const Portfolio = () => {
               {selectedItem.audioFiles.map((audio, index) => (
                 <div key={index} className="modal-audio-item">
                   <h4 className="modal-audio-title">{audio.title}</h4>
-                  <audio controls>
+                  <audio controls controlsList='nodownload noplaybackrate'>
                     <source src={audio.url} type="audio/mpeg" />
                     Your browser does not support the audio element.
                   </audio>
@@ -158,6 +173,55 @@ const Portfolio = () => {
               ))}
             </div>
           )}
+
+          {selectedItem.spotifyPlayer && (
+            <div className="modal-audio-wrapper">
+              <iframe
+                title="Spotify Player"
+                src={selectedItem.spotifyPlayer}
+                width="100%"
+                height="80"
+                frameBorder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="eager"
+                style={{ borderRadius: '12px' }}
+              ></iframe>
+            </div>
+          )}
+
+
+
+          {selectedItem.listenOn && selectedItem.listenOn.length > 0 && (
+            <div className="modal-platform-icons">
+              {selectedItem.listenOn.map((platform, index) => {
+                const [key, url] = Object.entries(platform)[0];
+                if (!url) return null;
+
+                const iconMap = {
+                  spotify: <FaSpotify />,
+                  youtube: <FaYoutube />,
+                  apple: <FaApple />,
+                  tidal: <SiTidal />,
+                  amazon: <FaAmazon />
+                };
+
+                return (
+                  <a
+                    key={index}
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="platform-icon"
+                    title={`Listen on ${key.charAt(0).toUpperCase() + key.slice(1)}`}
+                  >
+                    {iconMap[key]}
+                  </a>
+                );
+              })}
+            </div>
+          )}
+
+
           
           {selectedItem.link && (
             <div className="modal-link">

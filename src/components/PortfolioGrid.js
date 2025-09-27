@@ -28,7 +28,9 @@ const PortfolioGrid = ({ title, items, onCardClick }) => {
             onClick={(e) => onCardClick(item, e)}
             className="card"
           >
-            <img src={item.img} alt={item.title} />
+            <div className={item.imgborder && 'img-div-border'}>
+              <img style={item.imgborder && {objectFit: 'contain'}} src={item.img} alt={item.title} />
+            </div>
             <p>{item.title}</p>
 
             <div className="tags">
