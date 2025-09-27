@@ -8,9 +8,7 @@ import {
   FaSpotify, FaYoutube, FaApple, FaAmazon 
 } from 'react-icons/fa';
 
-import { SiTidal } from 'react-icons/si';
-
-
+// portfolio items
 const portfolioItems = [
   {
     img: '/projects/yearning.jpg',
@@ -66,6 +64,7 @@ const portfolioItems = [
   }
 ];
 
+// freelance items
 const freelanceItems = [
   {
     img: '/projects/med.jpg',
