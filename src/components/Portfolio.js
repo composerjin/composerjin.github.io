@@ -8,7 +8,8 @@ import {
   FaSpotify, FaYoutube, FaApple, FaAmazon 
 } from 'react-icons/fa';
 
-// portfolio items
+import { SiTidal } from 'react-icons/si';
+
 const portfolioItems = [
   {
     img: '/projects/yearning.jpg',
