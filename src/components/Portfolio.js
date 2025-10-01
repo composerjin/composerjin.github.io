@@ -15,7 +15,7 @@ const portfolioItems = [
     id: 'yearning',
     img: '/projects/yearning.jpg',
     title: 'Yearning You Yet',
-    description: 'A cinematic string quartet for film and visual storytelling, enhancing emotional depth. Available for streaming on all major platforms.',
+    description: 'Yearning You Yet, a cinematic string quartet that awakens one’s own memories. Pre-save today and follow Jin Cho for future releases.',
     audioFiles: [
       { title: "Yearning You Yet (Sample)", url: '/audio/yearning-sample.mp3' },
     ],
