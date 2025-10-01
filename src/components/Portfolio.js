@@ -1,5 +1,5 @@
 // src/components/Portfolio.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Portfolio.css';
 import PortfolioGrid from './PortfolioGrid';
 
@@ -12,22 +12,24 @@ import { SiTidal } from 'react-icons/si';
 
 const portfolioItems = [
   {
+    id: 'yearning',
     img: '/projects/yearning.jpg',
     title: 'Yearning You Yet',
     description: 'A cinematic string quartet for film and visual storytelling, enhancing emotional depth. Available for streaming on all major platforms.',
-    // audioFiles: [
-    //   { title: "Grit Excerpt", url: '/audio/grit.mp3' },
-    // ],
-    tags: ['Available for Streaming'],
+    audioFiles: [
+      { title: "Yearning You Yet (Sample)", url: '/audio/yearning-sample.mp3' },
+    ],
+    tags: ['Available for Streaming','Releases 17 Oct'],
     imgborder: true,
-    spotifyPlayer : 'https://open.spotify.com/embed/track/{id}', 
-    listenOn: [
-      {spotify:'tmp'},
-      {youtube:'tmp'},
-      {apple:'tmp'},
-      {tidal:'tmp'},
-      {amazon:'tmp'}
-    ]
+    // spotifyPlayer : 'https://open.spotify.com/embed/track/{id}', 
+    // listenOn: [
+    //   {spotify:'tmp'},
+    //   {youtube:'tmp'},
+    //   {apple:'tmp'},
+    //   {tidal:'tmp'},
+    //   {amazon:'tmp'}
+    // ]
+    spotifypresave : 'https://show.co/social-unlock/39jOt8WnNDOzUtUA11NMYX/widget'
   },
   {
     img: '/projects/gugak.jpg',
@@ -106,8 +108,15 @@ const freelanceItems = [
   },
 ]
 
-const Portfolio = () => {
+const Portfolio = ({ modalKey }) => {
   const [selectedItem, setSelectedItem] = useState(null);
+
+  useEffect(() => {
+    if (modalKey) {
+      const item = portfolioItems.find(i => i.id === modalKey);
+      if (item) setSelectedItem(item);
+    }
+  }, [modalKey]);
 
   const openModal = (item, e) => {
     e.preventDefault();
@@ -135,6 +144,7 @@ const Portfolio = () => {
         <div className="modal-content" onClick={e => e.stopPropagation()}>
           <button className="modal-close" onClick={closeModal}>×</button>
 
+          {/* Video */}
           {selectedItem.hasVideo ? (
             <div className="modal-image-wrapper">
               <iframe
@@ -147,7 +157,16 @@ const Portfolio = () => {
                 allowFullScreen
               ></iframe>
             </div>
-          ) : (
+          ) : 
+            // Presave
+            selectedItem.spotifypresave ? (
+              <div>
+                <iframe src={selectedItem.spotifypresave} title='Spotify Presave' className="modal-video" frameborder="0"></iframe>
+              </div>
+            ) :
+          
+            // Image
+            (
               <img
                 className={selectedItem.imgborder ? 'modal-img-div-border' : 'modal-image'}
                 src={selectedItem.img}
