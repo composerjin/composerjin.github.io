@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import './Portfolio.css';
 import PortfolioGrid from './PortfolioGrid';
+import AudioWave from './AudioWave';
 
 import {
   FaExternalLinkAlt,
@@ -10,6 +11,7 @@ import {
 
 import { SiTidal } from 'react-icons/si';
 
+
 const portfolioItems = [
   {
     id: 'yearning',
@@ -17,7 +19,7 @@ const portfolioItems = [
     title: 'Yearning You Yet',
     description: 'Yearning You Yet, a cinematic string quartet that awakens one’s own memories. Pre-save today and follow Jin Cho for future releases.',
     audioFiles: [
-      { title: "Yearning You Yet (Sample)", url: '/audio/yearning-sample.mp3' },
+      { title: "Yearning You Yet (Sample)", url: '/audio/yearning-sample.mp3', markers: [] },
     ],
     tags: ['Available for Streaming','Releases 17 Oct'],
     imgborder: true,
@@ -182,13 +184,14 @@ const Portfolio = ({ modalKey }) => {
           {selectedItem.audioFiles && selectedItem.audioFiles.length > 0 && (
             <div className="modal-audio-wrapper">
               {selectedItem.audioFiles.map((audio, index) => (
-                <div key={index} className="modal-audio-item">
-                  <h4 className="modal-audio-title">{audio.title}</h4>
-                  <audio controls controlsList='nodownload noplaybackrate'>
-                    <source src={audio.url} type="audio/mpeg" />
-                    Your browser does not support the audio element.
-                  </audio>
-                </div>
+                // <div key={index} className="modal-audio-item">
+                //   <h4 className="modal-audio-title">{audio.title}</h4>
+                //   <audio controls controlsList='nodownload noplaybackrate'>
+                //     <source src={audio.url} type="audio/mpeg" />
+                //     Your browser does not support the audio element.
+                //   </audio>
+                // </div>
+                <AudioWave key={index} url={audio.url} title={audio.title} markers={audio.markers} />
               ))}
             </div>
           )}
