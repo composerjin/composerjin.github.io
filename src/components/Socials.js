@@ -11,21 +11,33 @@ import {
 } from 'react-icons/fa';
 
 import {
-  SiUpwork
+  SiUpwork,
+  SiApplemusic,
+  SiAmazonmusic,
+  SiYoutubemusic
 } from 'react-icons/si';
 
 const socialLinks = [
-  {
-    icon: <FaYoutube />,
-    href: 'https://www.youtube.com/@composer-jin',
-    enabled: true,
-  },
   {
     icon: <FaSpotify />,
     enabled: false,
   },
   {
-    icon: <FaSoundcloud />,
+    icon: <SiYoutubemusic />,
+    href: 'https://www.youtube.com/@composer-jin',
+    enabled: true,
+  },
+
+  {
+    icon: <SiApplemusic />,
+    enabled: false,
+  },
+  {
+    icon: <SiAmazonmusic/>,
+    enabled: false,
+  },
+  {
+    icon: <FaSoundcloud className='hide-mobile-social'/>,
     enabled: false,
   },
   {
@@ -46,8 +58,8 @@ const socialLinks = [
 ];
 
 const Socials = () => {
-  const leftIcons = socialLinks.slice(0, 3);
-  const rightIcons = socialLinks.slice(3);
+  const leftIcons = socialLinks.slice(0, 4);
+  const rightIcons = socialLinks.slice(4);
 
   const renderIcons = (group) =>
     group.map(({ icon, href, enabled }, index) =>
