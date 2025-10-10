@@ -19,7 +19,7 @@ const PortfolioGrid = ({ title, items, onCardClick }) => {
 
   return (
     <section className="portfolio-section">
-      <h2>{title}</h2>
+      <h2 className="portfolio-section-title">{title}</h2>
       <div className="portfolio-grid">
         {paginatedItems.map((item) => (
           <a

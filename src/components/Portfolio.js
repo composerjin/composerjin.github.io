@@ -117,6 +117,8 @@ const Portfolio = ({ modalKey }) => {
     if (modalKey) {
       const item = portfolioItems.find(i => i.id === modalKey);
       if (item) setSelectedItem(item);
+    } else {
+      setSelectedItem(null);
     }
   }, [modalKey]);
 

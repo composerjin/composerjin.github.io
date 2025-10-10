@@ -5,7 +5,7 @@
   max-width: 800px;
 }
 
-.portfolio h2 {
+.portfolio-section-title {
   text-align: center;
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
@@ -385,4 +385,71 @@
     aspect-ratio: 16 / 9;
     border-radius: 0.5rem;
   }
+}
+
+/* Contact Modal */
+.contact-button {
+  background-color: var(--primary-text);
+  color: var(--bg-secondary-highlight);
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.contact-intro {
+  color: var(--primary-text);
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+  color: var(--primary-text);
+}
+
+
+.contact-button:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--primary-text);
+  font-size: 1rem;
+  width: 100%;
+  background-color: white;
+  color: var(--primary-text);
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  background-color: var(--primary-text);
+  color: var(--bg-secondary-highlight);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.contact-form button:hover {
+  background-color: var(--accent-color);
+  color: white;
 }
