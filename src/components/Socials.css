@@ -54,9 +54,13 @@
   color: gray;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .header-socials {
     display: none;
+  }
+
+  .hide-mobile-social {
+    display: none !important;
   }
 
   .mobile-socials-wrapper {
@@ -66,7 +70,7 @@
   .socials {
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    /* gap: 1.5rem; */
     padding: 0 1rem;
     font-size: 2rem;
   }

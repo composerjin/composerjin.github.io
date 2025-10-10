@@ -15,7 +15,7 @@ import { SiTidal } from 'react-icons/si';
 const portfolioItems = [
   {
     id: 'yearning',
-    img: '/projects/yearning.jpg',
+    img: '/projects/yearning.webp',
     title: 'Yearning You Yet',
     description: 'Yearning You Yet, a cinematic string quartet that awakens one’s own memories. Pre-save today and follow Jin Cho for future releases.',
     audioFiles: [
@@ -34,7 +34,7 @@ const portfolioItems = [
     spotifypresave : 'https://show.co/social-unlock/39jOt8WnNDOzUtUA11NMYX/widget'
   },
   {
-    img: '/projects/gugak.jpg',
+    img: '/projects/gugak.webp',
     title: 'Performance on Gugak Broadcasting System (Gugak TV)',
     description: 'Performance on the traditional Korean string instrument geomungo was broadcast on Gugak Broadcasting System: TV (국악방송TV) on 18 July 2021, showcasing my interpretation of Korean traditional music on national television.',
     link: 'https://www.youtube.com/watch?v=lHceGfwlfY8',
@@ -45,7 +45,7 @@ const portfolioItems = [
   },
   
   {
-    img: '/projects/vrmusic.jpg',
+    img: '/projects/vrmusic.webp',
     title: 'Background & Trailer Music for VR Game Huetopia (Meta Quest 3)',
     description: 'Composed immersive ambient soundscapes, background music and dynamic trailer music tailored for VR gaming.',
     link: 'https://www.meta.com/en-gb/experiences/huetopia/26230755453235481/',
@@ -60,7 +60,7 @@ const portfolioItems = [
   {
     title: 'Sangria Stains – Solo Piano Performance at London College of Music',
     description: 'Solo piano piece composed by Jin Cho and performed by Emanuele Mollica at the London College of Music concert hall. Written for a recital themed Musical Exoticism, the piece captures the vibrant spirit of Spanish music and culture.',
-    img: '/projects/sangria-thumbnail.jpg',
+    img: '/projects/sangria-thumbnail.webp',
     link: 'https://youtu.be/eE1SCukFFcc',
     embed: 'https://www.youtube.com/embed/eE1SCukFFcc',
     linktext: 'Watch on YouTube',
@@ -72,7 +72,7 @@ const portfolioItems = [
 // freelance items
 const freelanceItems = [
   {
-    img: '/projects/med.jpg',
+    img: '/projects/med.webp',
     title: 'Medieval Fantasy BGM for Visual Media',
     description: 'BMG/OST evoking a medieval atmosphere, ideal for fantasy films, games, or trailers with a historical or dramatic tone.',
     audioFiles: [
@@ -82,7 +82,7 @@ const freelanceItems = [
     tags: ['Available for Licensing'],
   },
   {
-    img: '/projects/tension.jpg',
+    img: '/projects/tension.webp',
     title: 'Tension-Building BGM for Visual Media',
     description: 'Tension-building BGM crafted to amplify tension in high-pressure scenes',
     audioFiles: [
@@ -91,7 +91,7 @@ const freelanceItems = [
     tags: ['Available for Licensing'],
   },
   {
-    img: '/projects/nostalgia.jpg',
+    img: '/projects/nostalgia.webp',
     title: 'Nostalgia-evoking BGM',
     description: 'Nostalgia-evoking BGM crafted to deepen emotional immersion',
     audioFiles: [
@@ -100,7 +100,7 @@ const freelanceItems = [
     tags: ['Available for Licensing'],
   },
   {
-    img: '/projects/soothing.jpg',
+    img: '/projects/soothing.webp',
     title: 'Soothing BGM Loop for Cozy Gameplay',
     description: 'Loopable BGM crafted to evoke cosiness. Ideal for healing-themed games',
     audioFiles: [
