@@ -7,7 +7,8 @@ import {
   FaSpotify,
   FaLinkedin,
   FaSoundcloud,
-  FaEnvelope 
+  FaEnvelope, 
+  FaInstagram
 } from 'react-icons/fa';
 
 import {
@@ -37,12 +38,13 @@ const socialLinks = [
     enabled: false,
   },
   {
-    icon: <FaSoundcloud className='hide-mobile-social'/>,
-    enabled: false,
+    icon: <FaInstagram />,
+    href: 'https://www.instagram.com/composer_jincho/?igsh=MWY3ZHhvYnhoaG1hcg',
+    enabled: true,
   },
   {
     icon: <FaLinkedin />,
-    href: 'https://www.linkedin.com/in/jinnie-cho-23a05b331/',
+    href: 'https://www.linkedin.com/in/jin-cho-23a05b331/',
     enabled: true,
   },
   {

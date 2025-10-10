@@ -402,7 +402,7 @@
 .contact-intro {
   color: var(--primary-text);
   margin-bottom: 1rem;
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
 
   font-size: 1.1rem;
   line-height: 1.6;

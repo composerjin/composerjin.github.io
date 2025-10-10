@@ -17,7 +17,7 @@ const portfolioItems = [
     id: 'yearning',
     img: '/projects/yearning.webp',
     title: 'Yearning You Yet',
-    description: 'Yearning You Yet, a cinematic string quartet that awakens one’s own memories. Pre-save today and follow Jin Cho for future releases.',
+    description: 'Composed and recorded with live musicians in London, Yearning You Yet is a neoclassical string quartet that captures a sense of longing and nostalgia. Written with rich harmonic textures through the interplay between the four instruments, it marks my debut release as a composer.',
     audioFiles: [
       { title: "Yearning You Yet (Sample)", url: '/audio/yearning-sample.mp3', markers: [] },
     ],

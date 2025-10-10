@@ -28,26 +28,26 @@ function App() {
             <Routes>
               <Route path="/" element={
                 <>
-                  <Portfolio/>
                   <Contact/>
+                  <Portfolio/>
                 </>
               } />
               <Route path="/yearning" element={
                 <>
-                  <Portfolio modalKey="yearning" />
                   <Contact/>
+                  <Portfolio modalKey="yearning" />
                 </>
               } />
               <Route path="/contact" element={
                 <>
-                  <Portfolio />
                   <Contact forceOpen={1} />
+                  <Portfolio /> 
                 </>
               } />
               <Route path="*" element={
                 <>
-                  <Portfolio />
                   <Contact/>
+                  <Portfolio />
                 </>
               } />
             </Routes>
