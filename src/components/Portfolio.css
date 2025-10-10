@@ -407,32 +407,40 @@
   font-size: 1.1rem;
   line-height: 1.6;
   text-align: center;
-  color: var(--primary-text);
 }
 
-
 .contact-button:hover {
-  background-color: var(--accent-color);
-  color: white;
+  background-color: var(--bg-secondary-highlight);
+  color: var(--primary-text);
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
+  align-items: center;  
   gap: 0.75rem;
   margin-top: 1rem;
 }
 
 .contact-form input,
-.contact-form textarea {
+.contact-form textarea,
+.contact-form select {
   padding: 0.5rem;
   border-radius: 0.5rem;
   border: 1px solid var(--primary-text);
   font-size: 1rem;
   width: 100%;
+  max-width: 500px;
   background-color: white;
   color: var(--primary-text);
+  box-shadow: none;
+  appearance: none;
 }
+
+.contact-form select {
+  width: 60%;
+}
+
 
 .contact-form textarea {
   resize: vertical;
@@ -449,7 +457,16 @@
   transition: background-color 0.2s ease;
 }
 
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+
 .contact-form button:hover {
-  background-color: var(--accent-color);
-  color: white;
+  transform: scale(1.15);
+  color: var(--icon-highlight);
 }
