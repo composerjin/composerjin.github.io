@@ -18,20 +18,16 @@ const portfolioItems = [
     img: '/projects/yearning.webp',
     title: 'Yearning You Yet',
     description: 'Composed and recorded with live musicians in London, Yearning You Yet is a neoclassical string quartet that captures a sense of longing and nostalgia. Written with rich harmonic textures through the interplay between the four instruments, it marks my debut release as a composer.',
-    audioFiles: [
-      { title: "Yearning You Yet (Sample)", url: '/audio/yearning-sample.mp3', markers: [] },
-    ],
-    tags: ['Available for Streaming','Releases 17 Oct'],
+    tags: ['Available for Streaming','Released 17 Oct'],
     imgborder: true,
-    // spotifyPlayer : 'https://open.spotify.com/embed/track/{id}', 
-    // listenOn: [
-    //   {spotify:'tmp'},
-    //   {youtube:'tmp'},
-    //   {apple:'tmp'},
-    //   {tidal:'tmp'},
-    //   {amazon:'tmp'}
-    // ]
-    spotifypresave : 'https://show.co/social-unlock/39jOt8WnNDOzUtUA11NMYX/widget'
+    spotifyPlayer : 'https://open.spotify.com/embed/track/1KzxfA8qXsDhhqaOUVQDIz', 
+    listenOn: [
+      {spotify:'https://open.spotify.com/track/1KzxfA8qXsDhhqaOUVQDIz'},
+      {youtube:'https://music.youtube.com/channel/UCyQSTrOwON_cXMvxJzEohtw'},
+      {apple:'https://music.apple.com/gb/album/yearning-you-yet-single/1842944500'},
+      {tidal:'https://tidal.com/album/463740071/track/463740072'},
+      {amazon:'https://music.amazon.co.uk/albums/B0FT69DHK6?marketplaceId=A1F83G8C2ARO7P'},
+    ]
   },
   {
     img: '/projects/gugak.webp',
@@ -216,33 +212,38 @@ const Portfolio = ({ modalKey }) => {
 
 
           {selectedItem.listenOn && selectedItem.listenOn.length > 0 && (
-            <div className="modal-platform-icons">
-              {selectedItem.listenOn.map((platform, index) => {
-                const [key, url] = Object.entries(platform)[0];
-                if (!url) return null;
+            <>
+              <p className="modal-platform-header">
+                Available on all major streaming platforms
+              </p>
+              <div className="modal-platform-icons">
+                {selectedItem.listenOn.map((platform, index) => {
+                  const [key, url] = Object.entries(platform)[0];
+                  if (!url) return null;
 
-                const iconMap = {
-                  spotify: <FaSpotify />,
-                  youtube: <FaYoutube />,
-                  apple: <FaApple />,
-                  tidal: <SiTidal />,
-                  amazon: <FaAmazon />
-                };
+                  const iconMap = {
+                    spotify: <FaSpotify />,
+                    youtube: <FaYoutube />,
+                    apple: <FaApple />,
+                    tidal: <SiTidal />,
+                    amazon: <FaAmazon />
+                  };
 
-                return (
-                  <a
-                    key={index}
-                    href={url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="platform-icon"
-                    title={`Listen on ${key.charAt(0).toUpperCase() + key.slice(1)}`}
-                  >
-                    {iconMap[key]}
-                  </a>
-                );
-              })}
-            </div>
+                  return (
+                    <a
+                      key={index}
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="platform-icon"
+                      title={`Listen on ${key.charAt(0).toUpperCase() + key.slice(1)}`}
+                    >
+                      {iconMap[key]}
+                    </a>
+                  );
+                })}
+              </div>
+            </>
           )}
 
 

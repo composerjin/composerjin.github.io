@@ -309,6 +309,11 @@
   pointer-events: none;
 }
 
+.modal-platform-header {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
 
 .modal-platform-icons {
   display: flex;

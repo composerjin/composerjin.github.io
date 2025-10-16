@@ -21,21 +21,24 @@ import {
 const socialLinks = [
   {
     icon: <FaSpotify />,
-    enabled: false,
+    href: 'https://open.spotify.com/artist/0OEnezr5378wxAoigqlcUr',
+    enabled: true,
   },
   {
     icon: <SiYoutubemusic />,
-    href: 'https://www.youtube.com/@composer-jin',
+    href: 'https://music.youtube.com/channel/UCyQSTrOwON_cXMvxJzEohtw',
     enabled: true,
   },
 
   {
     icon: <SiApplemusic />,
-    enabled: false,
+    href: 'https://music.apple.com/gb/artist/jin-cho/1842944061',
+    enabled: true,
   },
   {
     icon: <SiAmazonmusic/>,
-    enabled: false,
+    href: 'https://music.amazon.co.uk/artists/B0F8ZR9C8T/jin-cho?marketplaceId=A1F83G8C2ARO7P',
+    enabled: true,
   },
   {
     icon: <FaInstagram />,
