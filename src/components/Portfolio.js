@@ -14,6 +14,26 @@ import { SiTidal } from 'react-icons/si';
 
 const portfolioItems = [
   {
+    id: 'masquerade',
+    img: '/projects/masquerade.webp',
+    title: 'Waltz at Life\'s Masquerade',
+    description: 'My new release. Available February 28, 2026',
+    // audioFiles: [
+    //   { title: "Yearning You Yet (Sample)", url: '/audio/yearning-sample.mp3', markers: [] },
+    // ],
+    tags: ['Available for Streaming','Releases 28 Feb'],
+    imgborder: true,
+    // spotifyPlayer : 'https://open.spotify.com/embed/track/{id}', 
+    // listenOn: [
+    //   {spotify:'tmp'},
+    //   {youtube:'tmp'},
+    //   {apple:'tmp'},
+    //   {tidal:'tmp'},
+    //   {amazon:'tmp'}
+    // ]
+    spotifypresave : 'https://show.co/social-unlock/0TWczBkK4Uurck2sEVzrth/widget'
+  },
+  {
     id: 'yearning',
     img: '/projects/yearning.webp',
     title: 'Yearning You Yet',
@@ -126,13 +146,13 @@ const Portfolio = ({ modalKey }) => {
   const closeModal = () => setSelectedItem(null);
 
   return (
-  <>
-    <PortfolioGrid
-      title="Portfolio"
-      items={portfolioItems}
-      onCardClick={openModal}
-    />
-
+  <> 
+    <PortfolioGrid 
+      title="Portfolio" 
+      items={portfolioItems} 
+      onCardClick={openModal} 
+    /> 
+ 
     <PortfolioGrid
       title="Available for Licensing"
       items={freelanceItems}
