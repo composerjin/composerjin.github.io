@@ -17,10 +17,10 @@ const portfolioItems = [
     id: 'masquerade',
     img: '/projects/masquerade.webp',
     title: 'Waltz at Life\'s Masquerade',
-    description: 'My new release. Available February 28, 2026',
-    // audioFiles: [
-    //   { title: "Yearning You Yet (Sample)", url: '/audio/yearning-sample.mp3', markers: [] },
-    // ],
+    description: 'Waltz at Life’s Masquerade is a solo piano waltz shaped by tension and momentum, reflecting the fleeting nature of life and the emotions along the way.',
+    audioFiles: [
+      { title: "Waltz at Life's Masquerade (Sample)", url: '/audio/waltz-clip.mp3', markers: [] },
+    ],
     tags: ['Available for Streaming','Releases 28 Feb'],
     imgborder: true,
     // spotifyPlayer : 'https://open.spotify.com/embed/track/{id}', 
