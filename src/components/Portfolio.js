@@ -18,32 +18,32 @@ const portfolioItems = [
     img: '/projects/masquerade.webp',
     title: 'Waltz at Life\'s Masquerade',
     description: 'Waltz at Life’s Masquerade is a solo piano waltz shaped by tension and momentum, reflecting the fleeting nature of life and the emotions along the way.',
-    audioFiles: [
-      { title: "Waltz at Life's Masquerade (Sample)", url: '/audio/waltz-clip.mp3', markers: [] },
-    ],
-    tags: ['Available for Streaming','Releases 28 Feb'],
+    // audioFiles: [
+    //   { title: "Waltz at Life's Masquerade (Sample)", url: '/audio/waltz-clip.mp3', markers: [] },
+    // ],
+    tags: ['Available for Streaming','Released Feb 2026'],
     imgborder: true,
-    // spotifyPlayer : 'https://open.spotify.com/embed/track/{id}', 
-    // listenOn: [
-    //   {spotify:'tmp'},
-    //   {youtube:'tmp'},
-    //   {apple:'tmp'},
-    //   {tidal:'tmp'},
-    //   {amazon:'tmp'}
-    // ]
-    spotifypresave : 'https://show.co/social-unlock/0TWczBkK4Uurck2sEVzrth/widget'
+    spotifyPlayer : 'https://open.spotify.com/embed/track/1RIQKRVGjyyvKhsbvUKt8E?si=36ed964e9b7f46fb', 
+    listenOn: [
+      {spotify:'https://open.spotify.com/track/1RIQKRVGjyyvKhsbvUKt8E?si=36ed964e9b7f46fb'},
+      {youtube:'https://music.youtube.com/playlist?list=OLAK5uy_mlXpnpA8WZRXsaDgal_fi0p36M8wmqoR0'},
+      {apple:'https://music.apple.com/gb/album/waltz-at-lifes-masquerade-single/1870329371'},
+      {tidal:'https://tidal.com/album/490840476/track/490840477'},
+      {amazon:'https://music.amazon.co.uk/albums/B0GHPGXY1D?marketplaceId=A1F83G8C2ARO7P'}
+    ]
+    //spotifypresave : 'https://show.co/social-unlock/0TWczBkK4Uurck2sEVzrth/widget'
   },
   {
     id: 'yearning',
     img: '/projects/yearning.webp',
     title: 'Yearning You Yet',
     description: 'Composed and recorded with live musicians in London, Yearning You Yet is a neoclassical string quartet that captures a sense of longing and nostalgia. Written with rich harmonic textures through the interplay between the four instruments, it marks my debut release as a composer.',
-    tags: ['Available for Streaming','Released 17 Oct'],
+    tags: ['Available for Streaming','Released Oct 2025'],
     imgborder: true,
     spotifyPlayer : 'https://open.spotify.com/embed/track/1KzxfA8qXsDhhqaOUVQDIz', 
     listenOn: [
       {spotify:'https://open.spotify.com/track/1KzxfA8qXsDhhqaOUVQDIz'},
-      {youtube:'https://music.youtube.com/channel/UCyQSTrOwON_cXMvxJzEohtw'},
+      {youtube:'https://music.youtube.com/playlist?list=OLAK5uy_n5iCoa3Op9-3juMxeG-DNgy4VlRITYBPU'},
       {apple:'https://music.apple.com/gb/album/yearning-you-yet-single/1842944500'},
       {tidal:'https://tidal.com/album/463740071/track/463740072'},
       {amazon:'https://music.amazon.co.uk/albums/B0FT69DHK6?marketplaceId=A1F83G8C2ARO7P'},
