@@ -59,7 +59,6 @@ const portfolioItems = [
     hasVideo: true,
     tags: ['Performance'],
   },
-  
   {
     img: '/projects/vrmusic.webp',
     title: 'Background & Trailer Music for VR Game Huetopia (Meta Quest 3)',
@@ -72,7 +71,16 @@ const portfolioItems = [
     ],
     tags: ['Upcoming'],
   },
-
+  {
+    img: '/projects/obang.webp',
+    title: '\'5 Colours of Obang\' Live Perfomance',
+    description: 'Live perfomance by Asian Arts Assembly 28th Feb 2026 at Brent Cross.',
+    link: 'https://www.youtube.com/watch?v=yR23s2B8Dfk',
+    embed: 'https://www.youtube.com/embed/yR23s2B8Dfk',
+    linktext: 'Watch on YouTube',
+    hasVideo: true,
+    tags: ['Performance'],
+  },
   {
     title: 'Sangria Stains – Solo Piano Performance at London College of Music',
     description: 'Solo piano piece composed by Jin Cho and performed by Emanuele Mollica at the London College of Music concert hall. Written for a recital themed Musical Exoticism, the piece captures the vibrant spirit of Spanish music and culture.',
