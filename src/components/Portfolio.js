@@ -11,8 +11,27 @@ import {
 
 import { SiTidal } from 'react-icons/si';
 
-
-const portfolioItems = [
+const releases = [
+  {
+    id: 'thinking',
+    img: '/projects/thinking.webp',
+    title: 'Can\'t Stop Thinking',
+    description: 'Pre-save Can\'t Stop Thinking on Spotify to add it to your playlists.',
+    audioFiles: [
+      { title: "Can\'t Stop Thinking (Sample)", url: '/audio/thinking-clip.mp3', markers: [] },
+    ],
+    tags: ['Coming 11th April'],
+    imgborder: true,
+    // spotifyPlayer : 'https://open.spotify.com/embed/track/1RIQKRVGjyyvKhsbvUKt8E?si=36ed964e9b7f46fb', 
+    // listenOn: [
+    //   {spotify:'https://open.spotify.com/track/1RIQKRVGjyyvKhsbvUKt8E?si=36ed964e9b7f46fb'},
+    //   {youtube:'https://music.youtube.com/playlist?list=OLAK5uy_mlXpnpA8WZRXsaDgal_fi0p36M8wmqoR0'},
+    //   {apple:'https://music.apple.com/gb/album/waltz-at-lifes-masquerade-single/1870329371'},
+    //   {tidal:'https://tidal.com/album/490840476/track/490840477'},
+    //   {amazon:'https://music.amazon.co.uk/albums/B0GHPGXY1D?marketplaceId=A1F83G8C2ARO7P'}
+    // ]
+    spotifypresave : 'https://show.co/social-unlock/2QXyweRgBYuOzH2x7ncVXA/widget'
+  },
   {
     id: 'masquerade',
     img: '/projects/masquerade.webp',
@@ -49,6 +68,10 @@ const portfolioItems = [
       {amazon:'https://music.amazon.co.uk/albums/B0FT69DHK6?marketplaceId=A1F83G8C2ARO7P'},
     ]
   },
+]
+
+const perfomances = [
+  
   {
     img: '/projects/gugak.webp',
     title: 'Performance on Gugak Broadcasting System (Gugak TV)',
@@ -58,18 +81,6 @@ const portfolioItems = [
     linktext: 'Watch on YouTube',
     hasVideo: true,
     tags: ['Performance'],
-  },
-  {
-    img: '/projects/vrmusic.webp',
-    title: 'Background & Trailer Music for VR Game Huetopia (Meta Quest 3)',
-    description: 'Composed immersive ambient soundscapes, background music and dynamic trailer music tailored for VR gaming.',
-    link: 'https://www.meta.com/en-gb/experiences/huetopia/26230755453235481/',
-    linktext: 'View on Meta',
-    audioFiles: [
-      { title: "Huetopia Trailer", url: '/audio/Huetopia Trailer.mp3' },
-      { title: "Huetopia Background Music", url: '/audio/Huetopia revision 2.mp3' },
-    ],
-    tags: ['Upcoming'],
   },
   {
     img: '/projects/obang.webp',
@@ -94,7 +105,19 @@ const portfolioItems = [
 ];
 
 // freelance items
-const freelanceItems = [
+const projects_and_demos = [
+    {
+    img: '/projects/vrmusic.webp',
+    title: 'Background & Trailer Music for VR Game Huetopia (Meta Quest 3)',
+    description: 'Composed immersive ambient soundscapes, background music and dynamic trailer music tailored for VR gaming.',
+    link: 'https://www.meta.com/en-gb/experiences/huetopia/26230755453235481/',
+    linktext: 'View on Meta',
+    audioFiles: [
+      { title: "Huetopia Trailer", url: '/audio/Huetopia Trailer.mp3' },
+      { title: "Huetopia Background Music", url: '/audio/Huetopia revision 2.mp3' },
+    ],
+    tags: ['Upcoming'],
+  },
   {
     img: '/projects/med.webp',
     title: 'Medieval Fantasy BGM for Visual Media',
@@ -139,7 +162,7 @@ const Portfolio = ({ modalKey }) => {
 
   useEffect(() => {
     if (modalKey) {
-      const item = portfolioItems.find(i => i.id === modalKey);
+      const item = releases  .find(i => i.id === modalKey);
       if (item) setSelectedItem(item);
     } else {
       setSelectedItem(null);
@@ -157,13 +180,19 @@ const Portfolio = ({ modalKey }) => {
   <> 
     <PortfolioGrid 
       title="Portfolio" 
-      items={portfolioItems} 
+      items={releases} 
       onCardClick={openModal} 
     /> 
  
     <PortfolioGrid
-      title="Available for Licensing"
-      items={freelanceItems}
+      title="Perfomances"
+      items={perfomances}
+      onCardClick={openModal}
+    />
+
+    <PortfolioGrid
+      title="Projects & Demos"
+      items={projects_and_demos}
       onCardClick={openModal}
     />
 
