@@ -38,6 +38,18 @@ function App() {
                   <Portfolio modalKey="yearning" />
                 </>
               } />
+              <Route path="/masquerade" element={
+                <>
+                  <Contact/>
+                  <Portfolio modalKey="masquerade" />
+                </>
+              } />
+              <Route path="/thinking" element={
+                <>
+                  <Contact/>
+                  <Portfolio modalKey="thinking" />
+                </>
+              } />
               <Route path="/contact" element={
                 <>
                   <Contact forceOpen={1} />
