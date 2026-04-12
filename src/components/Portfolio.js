@@ -16,7 +16,7 @@ const releases = [
     id: 'thinking',
     img: '/projects/thinking.webp',
     title: 'Can\'t Stop Thinking',
-    description: 'Pre-save Can\'t Stop Thinking on Spotify to add it to your playlists.',
+    description: 'Can\'t Stop Thinking is my latest release, now available on all major music platforms.',
     // audioFiles: [
     //   { title: "Can\'t Stop Thinking (Sample)", url: '/audio/thinking-clip.mp3', markers: [] },
     // ],
