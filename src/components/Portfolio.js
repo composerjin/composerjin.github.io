@@ -17,23 +17,23 @@ const releases = [
     img: '/projects/thinking.webp',
     title: 'Can\'t Stop Thinking',
     description: 'Pre-save Can\'t Stop Thinking on Spotify to add it to your playlists.',
-    audioFiles: [
-      { title: "Can\'t Stop Thinking (Sample)", url: '/audio/thinking-clip.mp3', markers: [] },
-    ],
-    tags: ['Coming 11th April'],
+    // audioFiles: [
+    //   { title: "Can\'t Stop Thinking (Sample)", url: '/audio/thinking-clip.mp3', markers: [] },
+    // ],
+    tags: ['Available for Streaming','Released Apr 2026'],
     imgborder: true,
-    // spotifyPlayer : 'https://open.spotify.com/embed/track/1RIQKRVGjyyvKhsbvUKt8E?si=36ed964e9b7f46fb', 
-    // listenOn: [
-    //   {spotify:'https://open.spotify.com/track/1RIQKRVGjyyvKhsbvUKt8E?si=36ed964e9b7f46fb'},
-    //   {youtube:'https://music.youtube.com/playlist?list=OLAK5uy_mlXpnpA8WZRXsaDgal_fi0p36M8wmqoR0'},
-    //   {apple:'https://music.apple.com/gb/album/waltz-at-lifes-masquerade-single/1870329371'},
-    //   {tidal:'https://tidal.com/album/490840476/track/490840477'},
-    //   {amazon:'https://music.amazon.co.uk/albums/B0GHPGXY1D?marketplaceId=A1F83G8C2ARO7P'}
-    // ]
-    spotifypresave : 'https://show.co/social-unlock/2QXyweRgBYuOzH2x7ncVXA/widget'
+    spotifyPlayer : 'https://open.spotify.com/embed/track/0nuDKfcour3GCshAchvHG9', 
+    listenOn: [
+      {spotify:'https://open.spotify.com/track/0nuDKfcour3GCshAchvHG9'},
+      {youtube:'https://music.youtube.com/playlist?list=OLAK5uy_mDUBWWj2vyKGFDUA1OEjGpI5Ie-fUB5Cw'},
+      {apple:'https://music.apple.com/gb/album/cant-stop-thinking-single/1886790189'},
+      {tidal:'https://tidal.com/track/508896115/u'},
+      {amazon:'https://music.amazon.co.uk/albums/B0GTCF7TPC?marketplaceId=A1F83G8C2ARO7P'}
+    ]
+    // spotifypresave : 'https://show.co/social-unlock/2QXyweRgBYuOzH2x7ncVXA/widget'
   },
   {
-    id: 'masquerade',
+    id: 'npm ',
     img: '/projects/masquerade.webp',
     title: 'Waltz at Life\'s Masquerade',
     description: 'Waltz at Life’s Masquerade is a solo piano waltz shaped by tension and momentum, reflecting the fleeting nature of life and the emotions along the way.',
@@ -42,7 +42,7 @@ const releases = [
     // ],
     tags: ['Available for Streaming','Released Feb 2026'],
     imgborder: true,
-    spotifyPlayer : 'https://open.spotify.com/embed/track/1RIQKRVGjyyvKhsbvUKt8E?si=36ed964e9b7f46fb', 
+    spotifyPlayer : 'https://open.spotify.com/embed/track/1RIQKRVGjyyvKhsbvUKt8E', 
     listenOn: [
       {spotify:'https://open.spotify.com/track/1RIQKRVGjyyvKhsbvUKt8E?si=36ed964e9b7f46fb'},
       {youtube:'https://music.youtube.com/playlist?list=OLAK5uy_mlXpnpA8WZRXsaDgal_fi0p36M8wmqoR0'},
@@ -118,6 +118,18 @@ const projects_and_demos = [
     ],
     tags: ['Upcoming'],
   },
+
+  {
+    img: '/projects/systemshock.webp',
+    title: 'System Shock 2 - Audio Redesign',
+    description: 'System Shock 2 - Audio Redesign | Sound Design & Music by Jin Cho',
+    link: 'https://www.youtube.com/watch?v=pxk6obsXx1M',
+    embed: 'https://www.youtube.com/embed/pxk6obsXx1M',
+    linktext: 'Watch on YouTube',
+    hasVideo: true,
+    tags: ['Audio Redesign'],
+  },
+
   {
     img: '/projects/med.webp',
     title: 'Medieval Fantasy BGM for Visual Media',
