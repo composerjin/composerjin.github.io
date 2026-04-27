@@ -131,6 +131,15 @@ const projects_and_demos = [
   },
 
   {
+    img: '/projects/chefkiss.webp',
+    title: 'A Chef\'s Kiss',
+    description: 'A short film brought to life with a fully original score that I composed.',
+    link: 'https://www.imdb.com/title/tt41611908/',
+    linktext: 'Check out the movie on IMDb',
+    tags: ['Short Film'],
+  },
+
+  {
     img: '/projects/med.webp',
     title: 'Medieval Fantasy BGM for Visual Media',
     description: 'BMG/OST evoking a medieval atmosphere, ideal for fantasy films, games, or trailers with a historical or dramatic tone.',
