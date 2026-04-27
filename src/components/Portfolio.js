@@ -120,6 +120,15 @@ const projects_and_demos = [
   },
 
   {
+    img: '/projects/chefkiss.webp',
+    title: 'A Chef\'s Kiss',
+    description: 'A short film brought to life with a fully original score that I composed.',
+    link: 'https://www.imdb.com/title/tt41611908/',
+    linktext: 'Check out the movie on IMDb',
+    tags: ['Short Film'],
+  },
+
+  {
     img: '/projects/systemshock.webp',
     title: 'System Shock 2 - Audio Redesign',
     description: 'System Shock 2 - Audio Redesign | Sound Design & Music by Jin Cho',
@@ -128,15 +137,6 @@ const projects_and_demos = [
     linktext: 'Watch on YouTube',
     hasVideo: true,
     tags: ['Audio Redesign'],
-  },
-
-  {
-    img: '/projects/chefkiss.webp',
-    title: 'A Chef\'s Kiss',
-    description: 'A short film brought to life with a fully original score that I composed.',
-    link: 'https://www.imdb.com/title/tt41611908/',
-    linktext: 'Check out the movie on IMDb',
-    tags: ['Short Film'],
   },
 
   {
@@ -183,7 +183,7 @@ const Portfolio = ({ modalKey }) => {
 
   useEffect(() => {
     if (modalKey) {
-      const item = releases  .find(i => i.id === modalKey);
+      const item = releases.find(i => i.id === modalKey);
       if (item) setSelectedItem(item);
     } else {
       setSelectedItem(null);
@@ -204,6 +204,12 @@ const Portfolio = ({ modalKey }) => {
       items={releases} 
       onCardClick={openModal} 
     /> 
+
+    <PortfolioGrid
+      title="Projects & Demos"
+      items={projects_and_demos}
+      onCardClick={openModal}
+    />
  
     <PortfolioGrid
       title="Perfomances"
@@ -211,11 +217,6 @@ const Portfolio = ({ modalKey }) => {
       onCardClick={openModal}
     />
 
-    <PortfolioGrid
-      title="Projects & Demos"
-      items={projects_and_demos}
-      onCardClick={openModal}
-    />
 
     {selectedItem && (
       <div className="modal-overlay" onClick={closeModal}>
