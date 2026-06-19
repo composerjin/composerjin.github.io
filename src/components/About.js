@@ -12,7 +12,7 @@ const About = () => {
 
       <h2>About Me</h2>
       <p>
-        I'm a London-based composer originally from South Korea, with years of experience in traditional Korean music and currently studying Film Composition at the London College of Music. This culturally diverse musical background allows me to respond flexibly to whatever sound, mood, or genre your project needs. I work fluently with Logic Pro for composing and producing, and can provide professionally notated scores using Sibelius when needed.  
+        I'm a London-based Flim, Game & Visual Media Composer originally from South Korea, with years of experience in traditional East Asian music and currently studying Film Composition at the London College of Music.
       </p>
     </section>
   );
