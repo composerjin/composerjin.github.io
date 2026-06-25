@@ -13,10 +13,30 @@ import { SiTidal } from 'react-icons/si';
 
 const releases = [
   {
+    id: 'fiverays',
+    img: '/projects/rays.webp',
+    title: 'Five Rays of Sunshine',
+    description: 'Five Rays of Sunshine is my latest release, now available on all major music platforms.',
+    audioFiles: [
+      { title: "Five Rays of Sunshine (Sample)", url: '/audio/rays-clip.wav', markers: [] },
+    ],
+    tags: ['Releases July'],
+    imgborder: true,
+    //spotifyPlayer : 'https://open.spotify.com/embed/track/0nuDKfcour3GCshAchvHG9', 
+    // listenOn: [
+    //   {spotify:'https://open.spotify.com/track/0nuDKfcour3GCshAchvHG9'},
+    //   {youtube:'https://music.youtube.com/playlist?list=OLAK5uy_mDUBWWj2vyKGFDUA1OEjGpI5Ie-fUB5Cw'},
+    //   {apple:'https://music.apple.com/gb/album/cant-stop-thinking-single/1886790189'},
+    //   {tidal:'https://tidal.com/track/508896115/u'},
+    //   {amazon:'https://music.amazon.co.uk/albums/B0GTCF7TPC?marketplaceId=A1F83G8C2ARO7P'}
+    // ]
+    spotifypresave : 'https://show.co/social-unlock/2VYoF4IXYW3hFX8YU5nFO8/widget'
+  },
+  {
     id: 'thinking',
     img: '/projects/thinking.webp',
     title: 'Can\'t Stop Thinking',
-    description: 'Can\'t Stop Thinking is my latest release, now available on all major music platforms.',
+    description: 'Can\'t Stop Thinking is now available on all major music platforms.',
     // audioFiles: [
     //   { title: "Can\'t Stop Thinking (Sample)", url: '/audio/thinking-clip.mp3', markers: [] },
     // ],
