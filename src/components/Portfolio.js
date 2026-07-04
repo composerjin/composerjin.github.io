@@ -13,14 +13,35 @@ import { SiTidal } from 'react-icons/si';
 
 const releases = [
   {
+    id: 'epilogue',
+    img: '/projects/epilogue.webp',
+    title: 'Christmas Epilogue',
+    description: 'Preview of my upcoming song.',
+    audioFiles: [
+      { title: "Christmas Epilogue (Pre-Release)", url: '/audio/epilogue.mp3' },
+    ],
+    tags: ['Upcoming', 'Releases August'],
+    imgborder: true,
+  },
+  {
+    id: 'cherry',
+    img: '/projects/cherry.webp',
+    title: 'Cherry Blossom Droplets',
+    description: 'Preview of my upcoming song.',
+    audioFiles: [
+      { title: "Cherry Blossom Droplets (Pre-Release)", url: '/audio/cherry.mp3' },
+    ],
+    tags: ['Upcoming', 'Releases August'],
+  },
+  {
     id: 'fiverays',
     img: '/projects/rays.webp',
     title: 'Five Rays of Sunshine',
     description: 'Five Rays of Sunshine is my latest release, now available on all major music platforms.',
     audioFiles: [
-      { title: "Five Rays of Sunshine (Sample)", url: '/audio/rays-clip.wav', markers: [] },
+      { title: "Five Rays of Sunshine (Pre-Release)", url: '/audio/rays-clip.mp3', markers: [] },
     ],
-    tags: ['Releases July'],
+    tags: ['Releases 24th July'],
     imgborder: true,
     //spotifyPlayer : 'https://open.spotify.com/embed/track/0nuDKfcour3GCshAchvHG9', 
     // listenOn: [
