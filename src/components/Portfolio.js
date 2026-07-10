@@ -182,6 +182,7 @@ const projects_and_demos = [
 
   {
     img: '/projects/med.webp',
+    id: 'medieval',
     title: 'Medieval Fantasy BGM for Visual Media',
     description: 'BMG/OST evoking a medieval atmosphere, ideal for fantasy films, games, or trailers with a historical or dramatic tone.',
     audioFiles: [
@@ -192,6 +193,7 @@ const projects_and_demos = [
   },
   {
     img: '/projects/tension.webp',
+    id: 'tension',
     title: 'Tension-Building BGM for Visual Media',
     description: 'Tension-building BGM crafted to amplify tension in high-pressure scenes',
     audioFiles: [
@@ -224,7 +226,9 @@ const Portfolio = ({ modalKey }) => {
 
   useEffect(() => {
     if (modalKey) {
-      const item = releases.find(i => i.id === modalKey);
+      const item = releases.find(i => i.id === modalKey)
+        || projects_and_demos.find(i => i.id === modalKey)
+        || perfomances.find(i => i.id === modalKey);
       if (item) setSelectedItem(item);
     } else {
       setSelectedItem(null);

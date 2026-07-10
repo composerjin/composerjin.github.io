@@ -32,6 +32,18 @@ function App() {
                   <Portfolio/>
                 </>
               } />
+              <Route path="/medieval" element={
+                <>
+                  <Contact/>
+                  <Portfolio modalKey="medieval" />
+                </>
+              } />
+              <Route path="/tension" element={
+                <>
+                  <Contact/>
+                  <Portfolio modalKey="tension" />
+                </>
+              } />
               <Route path="/yearning" element={
                 <>
                   <Contact/>
