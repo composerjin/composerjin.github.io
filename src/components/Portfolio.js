@@ -31,7 +31,7 @@ const releases = [
     audioFiles: [
       { title: "Cherry Blossom Droplets (Pre-Release)", url: '/audio/cherry.mp3' },
     ],
-    tags: ['Upcoming', 'Releases August'],
+    tags: ['Upcoming', 'Releases September'],
   },
   {
     id: 'fiverays',
