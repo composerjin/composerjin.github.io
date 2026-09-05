@@ -13,25 +13,34 @@ import { SiTidal } from 'react-icons/si';
 
 const releases = [
   {
-    id: 'epilogue',
-    img: '/projects/epilogue.webp',
-    title: 'Christmas Epilogue',
-    description: 'Preview of my upcoming song.',
-    audioFiles: [
-      { title: "Christmas Epilogue (Pre-Release)", url: '/audio/epilogue.mp3' },
-    ],
-    tags: ['Upcoming', 'Releases August'],
-    imgborder: true,
-  },
-  {
     id: 'cherry',
-    img: '/projects/cherry.webp',
+    img: '/projects/cbd.webp',
     title: 'Cherry Blossom Droplets',
     description: 'Preview of my upcoming song.',
     audioFiles: [
       { title: "Cherry Blossom Droplets (Pre-Release)", url: '/audio/cherry.mp3' },
     ],
-    tags: ['Upcoming', 'Releases September'],
+    tags: ['Upcoming', 'Releases September 18'],
+    spotifypresave : 'https://show.co/social-unlock/5RoyvSRs4D39E5PSVyqBLd/widget'
+  },
+  {
+    id: 'epilogue',
+    img: '/projects/epilogue.webp',
+    title: 'Christmas Epilogue',
+    description: 'Christmas Epilogue, now available on all major music platforms.',
+    // audioFiles: [
+    //   { title: "Christmas Epilogue (Pre-Release)", url: '/audio/epilogue.mp3' },
+    // ],
+    tags: ['Upcoming', 'Releases August'],
+    imgborder: true,
+    spotifyPlayer : 'https://open.spotify.com/embed/track/2zSnth6TA4qfMsRBji0VL4', 
+    listenOn: [
+      {spotify:'https://open.spotify.com/track/2zSnth6TA4qfMsRBji0VL4'},
+      {youtube:'https://music.youtube.com/watch?v=ZvC1gweGFYA'},
+      {apple:'https://music.apple.com/album/christmas-epilogue-single/6796766313'},
+      {tidal:'https://tidal.com/track/548187093'},
+      {amazon:'https://music.amazon.co.uk/albums/B0HCF81RS2'}
+    ]
   },
   {
     id: 'fiverays',

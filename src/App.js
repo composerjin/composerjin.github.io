@@ -62,6 +62,12 @@ function App() {
                   <Portfolio modalKey="thinking" />
                 </>
               } />
+              <Route path="/cherry" element={
+                <>
+                  <Contact/>
+                  <Portfolio modalKey="cherry" />
+                </>
+              } />
               <Route path="/contact" element={
                 <>
                   <Contact forceOpen={1} />
